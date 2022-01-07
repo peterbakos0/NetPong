@@ -5,7 +5,7 @@
 
 using namespace std;
 
-OGameOverInfo::OGameOverInfo(struct Score* score) : OInfo()
+OGameOverInfo::OGameOverInfo(Score* score) : OInfo()
 {
 	this->score = score;
 }

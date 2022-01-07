@@ -13,7 +13,7 @@ public:
 	void Start() override;
 	void Update() override;
 private:
-	struct Speed speed;
+	Speed speed;
 	OPaddle** oPaddles;
 };
 

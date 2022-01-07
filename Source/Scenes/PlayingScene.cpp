@@ -17,7 +17,7 @@
 #include "../IO/Communicator/Communicator.hpp"
 #include "PlayingScene.hpp"
 
-PlayingScene::PlayingScene(bool* didPlayerWin, struct Score* score, GameState* gameState, Action* action, Communicator* communicator)
+PlayingScene::PlayingScene(bool* didPlayerWin, Score* score, GameState* gameState, Action* action, Communicator* communicator)
 {
 	OPlayerPaddle* oPlayerPaddle = new OPlayerPaddle(action);
 	OEnemyPaddle* oEnemyPaddle = new OEnemyPaddle(&enemyPaddleY);
@@ -88,7 +88,7 @@ void PlayingScene::Update()
 
 	UpdateGameObjects();
 
-	struct Judgement judgement = judge->MakeJudgement();
+	Judgement judgement = judge->MakeJudgement();
 
 	*didPlayerWin = judgement.didPlayerWin;
 	*score = judgement.score;

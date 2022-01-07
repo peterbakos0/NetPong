@@ -7,7 +7,7 @@
 class GameOverScene : public Scene
 {
 public:
-	GameOverScene(bool* didPlayerWin, struct Score* score);
+	GameOverScene(bool* didPlayerWin, Score* score);
 
 	void Start() override;
 	void Update() override;

@@ -18,7 +18,7 @@ public:
 	void Start();
 private:
 	bool didPlayerWin;
-	struct Score score;
+	Score score;
 	GameState gameState;
 	Action action;
 	Scene* currentScene;

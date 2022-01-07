@@ -3,7 +3,7 @@
 #include "../GameObjects/OGameOverInfo.hpp"
 #include "GameOverScene.hpp"
 
-GameOverScene::GameOverScene(bool* didPlayerWin, struct Score* score)
+GameOverScene::GameOverScene(bool* didPlayerWin, Score* score)
 {
 	OGameOverTitle* oGameOverTitle = new OGameOverTitle(didPlayerWin);
 	OGameOverInfo* oGameOverInfo = new OGameOverInfo(score);

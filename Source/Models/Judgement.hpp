@@ -7,7 +7,7 @@
 struct Judgement
 {
 	bool didPlayerWin;
-	struct Score score;
+	Score score;
 	GameState gameState;
 };
 

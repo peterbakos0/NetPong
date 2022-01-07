@@ -12,8 +12,8 @@ public:
 	GameObject();
 
 	float opacity;
-	struct Position position;
-	struct Size size;
+	Position position;
+	Size size;
 	GameObjectType type;
 
 	virtual void Start() = 0;

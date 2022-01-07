@@ -7,12 +7,12 @@
 class OGameOverInfo : public OInfo
 {
 public:
-	OGameOverInfo(struct Score* score);
+	OGameOverInfo(Score* score);
 
 	void Start() override;
 	void Update() override;
 private:
-	struct Score* score;
+	Score* score;
 };
 
 #endif

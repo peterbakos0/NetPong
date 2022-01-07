@@ -18,14 +18,14 @@ SocketCommunicator::SocketCommunicator()
 
 void SocketCommunicator::Connect()
 {
-	struct sockaddr_in address;
+	sockaddr_in address;
 	address.sin_family = AF_INET;
 	address.sin_port = htons(config.PORT);
 
 	int addressLength = sizeof(address);
 	int sfd = socket(AF_INET, SOCK_STREAM, 0);
 
-	struct sockaddr* castedAddress = (struct sockaddr*) &address;
+	sockaddr* castedAddress = (sockaddr*) &address;
 
 	if(config.IS_HOST)
 	{
