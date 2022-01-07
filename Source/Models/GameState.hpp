@@ -1,0 +1,14 @@
+#ifndef GAMESTATE_HPP
+#define GAMESTATE_HPP
+
+enum GameState
+{
+	MENU,
+	CONNECTING,
+	PLAYING,
+	SCORED,
+	GAME_OVER,
+	QUITTING
+};
+
+#endif
