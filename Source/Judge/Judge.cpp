@@ -52,15 +52,12 @@ Judgement Judge::MakeJudgement()
 
 	int scoreDifference = abs(judgement.score.playerScore - judgement.score.enemyScore);
 
-	if(scoreDifference >= config.MINIMUM_SCORE_DIFFERENCE)
+	if(scoreDifference >= config.MINIMUM_SCORE_DIFFERENCE && (judgement.score.playerScore >= config.MINIMUM_WIN_SCORE || judgement.score.enemyScore >= config.MINIMUM_WIN_SCORE))
 	{
-		judgement.didPlayerWin = (judgement.score.playerScore >= config.MINIMUM_WIN_SCORE);
+		judgement.didPlayerWin = (judgement.score.playerScore > judgement.score.enemyScore);
+		judgement.gameState = GAME_OVER;
 
-		if(judgement.didPlayerWin || judgement.score.enemyScore >= config.MINIMUM_WIN_SCORE)
-		{
-			judgement.gameState = GAME_OVER;
-			return judgement;
-		}
+		return judgement;
 	}
 
 	judgement.gameState = SCORED;
