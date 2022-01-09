@@ -42,13 +42,10 @@ void Controller::Update()
 {
 	action = ioSet->actionGetter->GetAction();
 
-	switch(action)
+	if(action == QUIT)
 	{
-	case QUIT:
 		gameState = QUITTING;
 		return;
-	default:
-		break;
 	}
 
 	Scene* lastScene = currentScene;
@@ -71,9 +68,13 @@ void Controller::Update()
 
 	ioSet->video->Render();
 
-	switch(gameState)
+	HandleGameState();
+}
+
+void Controller::HandleGameState()
+{
+	if(gameState == CONNECTING)
 	{
-	case CONNECTING:
 		ioSet->communicator->Connect();
 
 		if(ioSet->communicator->isConnected)
@@ -84,10 +85,6 @@ void Controller::Update()
 		{
 			gameState = MENU;
 		}
-
-		break;
-	default:
-		break;
 	}
 }
 

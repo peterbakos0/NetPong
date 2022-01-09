@@ -28,6 +28,7 @@ private:
 	IOSet* ioSet;
 
 	void Update();
+	void HandleGameState();
 	void SetCurrentScene();
 };
 
