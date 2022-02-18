@@ -3,7 +3,6 @@
 
 OGameOverTitle::OGameOverTitle(bool* didPlayerWin) : OTitle()
 {
-	fontSize = 80;
 	this->didPlayerWin = didPlayerWin;
 }
 

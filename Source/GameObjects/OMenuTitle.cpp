@@ -3,8 +3,7 @@
 
 OMenuTitle::OMenuTitle() : OTitle()
 {
-	fontSize = 100;
-	text = "Pong";
+	text = "NetPong";
 
 	AdjustPosition();
 }

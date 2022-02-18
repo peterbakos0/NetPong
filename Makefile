@@ -11,7 +11,7 @@ BUILD_DIR=Build
 OBJECTS_DIR=Objects
 BINARY_DIR=Binary
 ASSETS_DIR=Assets
-TARGET_EXEC=Pong
+TARGET_EXEC=NetPong
 CONFIG_FILE=Config.txt
 
 SOURCE_ASSETS=*.aseprite

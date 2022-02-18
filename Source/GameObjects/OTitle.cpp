@@ -4,6 +4,7 @@
 OTitle::OTitle() : TextGameObject()
 {
 	opacity = 1;
+	fontSize = 80;
 }
 
 void OTitle::Update()

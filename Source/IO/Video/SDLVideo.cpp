@@ -19,7 +19,7 @@ SDLVideo::SDLVideo()
 void SDLVideo::Start()
 {
 	SDL_Window* window = SDL_CreateWindow(
-		"Pong",
+		"NetPong",
 		SDL_WINDOWPOS_UNDEFINED,
 		SDL_WINDOWPOS_UNDEFINED,
 		config.WINDOW_WIDTH,

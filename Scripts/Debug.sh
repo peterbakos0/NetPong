@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd ../Build/Binary
-gdb Pong
+gdb NetPong
